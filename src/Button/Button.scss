@@ -1,15 +1,19 @@
 @import 'src/styles/util';
 
 .button{
-    background: $oc-green-7;
-    transition: all .2s ease-in;
+    background: $oc-green-7;   //$oc-색-명암
+    transition: all .2s ease-in; // 애니메이션 0.2초동안 느린시작으로 진행 - 반응을 여러가지 방법으로 나타낼수있다.
     display: inline-block;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    text-align: center;
+    padding-top: 2rem; //rem은 상위 요소에 따라 반응형으로 변경되어야 할때 사용한다.
+    padding-bottom: 2rem; //rem은 상위 요소에 따라 반응형으로 변경되어야 할때 사용한다.
+    text-align: center; 
     color: white;
-    position:fixed;
-    font-size: 2rem;
+    position:fixed;  
+    // fixed 메뉴바 같은 곳에 사용 스크롤에 구애받지않고 그자리에 그대로 있음 -- top left 는 %로 나타내야 부자연스럽지 않다.
+    // absolute 상위의 요소(static)이 아닌 요소에 따라 상대적으로 움직임
+    // relative 자신의 원래위치를 기준으로 움직임
+    
+    font-size: 2rem;   //rem은 상위 요소에 따라 반응형으로 변경되어야 할때 사용한다.
     font-weight: 500;
     border-radius:4px;
     cursor:pointer;
@@ -31,12 +35,14 @@
     }
 
     &:hover{
-        background: $oc-green-6;
+        background: $oc-green-6; 
+        
+       
+
 
     }
     &:active{
-        margin-top:3px;
+        margin-top:3px;  //눌렀을 시 버튼이 살 짝 눌리는 느낌이 들게하기 위해 
         background: $oc-green-8;
     }
-
 }
