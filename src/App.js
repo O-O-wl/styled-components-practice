@@ -1,13 +1,14 @@
 import React from 'react'
 import Button from './Button/Button'
+import StyledButton from './StyledButton';
 
 
 class App extends React.Component{
 render(){
-    
+    const big =true;
     return(
     <div>
-        <Button >버튼</Button>
+        < StyledButton big={big} > 버튼 </ StyledButton>
         </div> 
 
 
